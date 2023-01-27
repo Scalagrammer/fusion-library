@@ -1,0 +1,38 @@
+syntax = "proto3";
+import "google/protobuf/field_mask.proto";
+
+option java_package = "scg.fusion.library.transport.grpc";
+
+service BookService {
+
+  rpc get(BookRequest) returns (BookResponse);
+
+  rpc add(Book) returns (Unit);
+
+}
+
+message Book {
+  string title = 1;
+  string author = 2;
+  Genre genre = 3;
+}
+
+message BookRequest{
+  string title = 1;
+  string author = 2;
+}
+
+
+message BookResponse {
+  Book book = 1;
+}
+
+enum Genre{
+  ACTION = 0;
+  HORROR = 1;
+  DRAMA = 2;
+  LOVE = 3;
+  SF = 4;
+};
+
+message Unit {}

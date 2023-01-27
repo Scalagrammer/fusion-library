@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<discover>
+    <found>scg.fusion.opa.OpaClient</found>
+    <found>scg.fusion.grpc.NettyGrpcUnit</found>
+    <found>scg.fusion.jpa.PersistenceUnit</found>
+</discover>
